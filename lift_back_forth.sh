@@ -15,12 +15,12 @@ echo  $bed_directory/$organism_one.rmsk.bed
 # organism_two.first.unlifted.bed is anything that didn't lift 
 
 liftOver $bed_directory/$organism_one.rmsk.bed \
-	$chain_directory/$organism_one-$organism_two.chain.gz \
+	$chain_directory/$organism_two-$organism_one.chain.gz \
 	$organism_one.$organism_two.first.lifted.bed \
 	$organism_one.$organism_two.first.unlifted.bed
 
 # lifts the new coordinates back to the first organism to check if lifting was successful 
 liftOver $organism_one.$organism_two.first.lifted.bed \
-	$chain_directory/$organism_two-$organism_one.chain.gz \
+	$chain_directory/$organism_one-$organism_two.chain.gz \
 	$organism_one.$organism_two.check.lifted.bed \
 	$organism_one.$organism_two.check.unlifted.bed
