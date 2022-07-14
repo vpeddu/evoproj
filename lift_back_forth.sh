@@ -14,7 +14,7 @@ echo  $bed_directory/$organism_one.rmsk.bed
 # organism_two.first.lifted.bed is the lifted coordinates to the new genome
 # organism_two.first.unlifted.bed is anything that didn't lift 
 
-liftOver $bed_directory/$organism_one.rmsk.bed \
+liftOver $bed_directory/ucsc.rmsk.salmon.bed \
 	$chain_directory/$organism_two-$organism_one.chain.gz \
 	$organism_one.$organism_two.first.lifted.bed \
 	$organism_one.$organism_two.first.unlifted.bed
