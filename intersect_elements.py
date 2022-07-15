@@ -2,6 +2,7 @@ import os
 import sys 
 import csv
 import glob
+import pickle 
 import pandas as pd
 from tqdm import tqdm
 from operator import ne
@@ -97,7 +98,7 @@ def check_if_intersects(df_index, comp_object):
     else:
         return False
 
-tqdm.tqdm.pandas()
+tqdm.pandas()
 intersection_table['Chimp'] = intersection_table.progress_apply(check_if_intersects, comp_object = HC_comp, axis = 1)
 intersection_table['Gorilla'] = intersection_table.progress_apply(check_if_intersects, comp_object = HG_comp, axis = 1)
 intersection_table['Orangutan'] = intersection_table.progress_apply(check_if_intersects, comp_object = HO_comp, axis = 1)
@@ -116,6 +117,7 @@ intersection_table.to_csv("intersection_table.csv")
 #cw.writerows(list(chimp_gorilla_intersections[0]))
 
 
+TE_DB = open('TEbag_DB.pkl', 'wb') 
+pickle.dump(intersection_table, TE_DB)
 
-from IPython import embed; embed()
-
+#from IPython import embed; embed()
