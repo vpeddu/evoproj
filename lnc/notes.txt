@@ -1,0 +1,1 @@
+got g39_lnc.bed.gz from table browser using gencode39 with gencode39 attributes where protein_type = lncRNA and download as bed on the table browser 

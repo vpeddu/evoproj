@@ -52,7 +52,7 @@ species_TE_df = species_TE_df.reset_index(drop = True)
 merged_species_TE_df = species_TE_df.merge(TE_quants, left_on = 'Human', right_on = 'Name')
 
 base = sys.argv[1]
-filename = base + "merged_species_TE_df.csv"
+filename = base + ".merged_species_TE_df.TEBAG.csv"
 
 merged_species_TE_df.to_csv(filename)
 

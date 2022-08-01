@@ -10,9 +10,6 @@ from cv2 import absdiff
 from imp import cache_from_source
 from multiprocessing import sharedctypes
 
-shared_elements = glob.glob('/Volumes/metagenomics_drive/liftover_project/lifted_beds/*.lifted.bed')
-unique_elements = glob.glob('/Volumes/metagenomics_drive/liftover_project/lifted_beds/first.unlifted.bed')
-
 class repeat_element():
     def __init__(self, chromosome, start, stop, name, score, strand):
         self.chromosome = chromosome
@@ -75,7 +72,6 @@ def create_intersections(ns, os):
     return [s, n, o]
     
 
-print(shared_elements)
 
 Human_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/human_bed/ucsc.rmsk.salmon.bed')
 Human_Chimp_lifted_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/lifted_beds/Human.Chimp.check.lifted.bed')

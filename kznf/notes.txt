@@ -1,0 +1,2 @@
+greppd "ZNF" from gencode 39 gtf to get ZNF records
+used bedops gtf2bed to convert gtf to bed
