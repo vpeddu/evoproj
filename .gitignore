@@ -2,3 +2,5 @@
 *.pkl
 *.csv.gz
 *.txt
+local_data/
+*.pkl
