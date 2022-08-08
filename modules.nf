@@ -18,7 +18,7 @@ ls -lah
 
 /usr/local/bin/liftOver ${human_bed} ${chain_from_human} ${species}.first.lifted.bed ${species}.first.unlifted.bed
 
-/usr/local/bin/liftOver ${species}.lifted.bed ${chain_to_human} ${species}.check.lifted.bed ${species}.check.unlifted.bed
+/usr/local/bin/liftOver ${species}.first.lifted.bed ${chain_to_human} ${species}.check.lifted.bed ${species}.check.unlifted.bed
 
 """
 }
