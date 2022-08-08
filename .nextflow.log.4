@@ -1,0 +1,82 @@
+Aug-08 15:12:25.960 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+Aug-08 15:12:26.079 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.07.1
+Aug-08 15:12:26.091 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [confident_descartes] - revision: 1c345a1310
+Aug-08 15:12:26.214 [main] DEBUG nextflow.Session - Session uuid: 045ea263-c62f-46fd-83ca-d3f1f80afdf0
+Aug-08 15:12:26.214 [main] DEBUG nextflow.Session - Run name: confident_descartes
+Aug-08 15:12:26.216 [main] DEBUG nextflow.Session - Executor pool size: 8
+Aug-08 15:12:26.257 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.07.1 build 5412
+  Created: 24-07-2020 15:18 UTC (08:18 PDT)
+  System: Mac OS X 10.15.7
+  Runtime: Groovy 2.5.11 on OpenJDK 64-Bit Server VM 11.0.6+8-b765.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 16634@eduroam-169-233-217-67.ucsc.edu [169.233.217.67]
+  CPUs: 8 - Mem: 16 GB (235.7 MB) - Swap: 2 GB (1.1 GB)
+Aug-08 15:12:26.273 [main] DEBUG nextflow.Session - Work-dir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work [Mac OS X]
+Aug-08 15:12:26.322 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Aug-08 15:12:26.324 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-08 15:12:26.456 [main] DEBUG nextflow.Session - Session start invoked
+Aug-08 15:12:26.822 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-08 15:12:26.845 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: 
+Aug-08 15:12:26.968 [main] DEBUG nextflow.Session - Ignite dataflow network (1)
+Aug-08 15:12:26.977 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-08 15:12:26.977 [main] DEBUG nextflow.Session - Session await
+Aug-08 15:12:26.977 [main] DEBUG nextflow.Session - Session await > all process finished
+Aug-08 15:12:26.977 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-08 15:12:26.994 [Actor Thread 2] ERROR nextflow.extension.OperatorEx - @unknown
+groovy.lang.MissingMethodException: No signature of method: nextflow.script.WorkflowBinding.val() is applicable for argument types: () values: []
+Possible solutions: tap(groovy.lang.Closure), wait(), any(), wait(long), is(java.lang.Object), use([Ljava.lang.Object;)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:98)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:397)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:339)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:821)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:397)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:337)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:64)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at Script_62d74041$_runScript_closure1$_closure2$_closure3.doCall(Script_62d74041:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:37)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at nextflow.extension.MapOp$_apply_closure1.doCall(MapOp.groovy:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.startTask(DataflowOperatorActor.java:120)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.onMessage(DataflowOperatorActor.java:108)
+	at groovyx.gpars.actor.impl.SDAClosure$1.call(SDAClosure.java:43)
+	at groovyx.gpars.actor.AbstractLoopingActor.runEnhancedWithoutRepliesOnMessages(AbstractLoopingActor.java:293)
+	at groovyx.gpars.actor.AbstractLoopingActor.access$400(AbstractLoopingActor.java:30)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:93)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Aug-08 15:12:27.031 [Actor Thread 2] DEBUG nextflow.Session - Session aborted -- Cause: No signature of method: nextflow.script.WorkflowBinding.val() is applicable for argument types: () values: []
+Possible solutions: tap(groovy.lang.Closure), wait(), any(), wait(long), is(java.lang.Object), use([Ljava.lang.Object;)
+Aug-08 15:12:27.074 [Actor Thread 2] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] map
+  [operator] view
+
+Aug-08 15:12:27.087 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Aug-08 15:12:27.285 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Aug-08 15:12:27.299 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

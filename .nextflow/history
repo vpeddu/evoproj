@@ -1,0 +1,30 @@
+2022-08-08 14:58:43	-	distraught_hopper	-	1dee1ee0c708f05022af36cf8e02c872	39c4d46c-8565-4f17-8c73-854e9d5ddefc	nextflow run main.nf
+2022-08-08 14:58:54	-	determined_snyder	-	a10b4d51721a02372303c3bd83b33625	070ebf1a-ebc7-45bb-8b55-04a17c2ccf8c	nextflow run main.nf --generate_db
+2022-08-08 15:00:06	-	distraught_swartz	-	a10b4d51721a02372303c3bd83b33625	82b66b3a-a0af-4726-a566-df0b297af657	nextflow run main.nf --generate_db --csv_input bin/sample_generate_csv.csv
+2022-08-08 15:00:31	983ms	focused_euclid	ERR	e7e71003cd43af9dabcacebe03e4e401	2e4bd5e6-31ae-4a9f-88ab-7f8ee8b9ad93	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:01:15	1.9s	hungry_gautier	OK	e7e71003cd43af9dabcacebe03e4e401	3f7e816c-7b03-422e-9efe-288bb5cf2297	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:01:49	1.8s	fabulous_ekeblad	OK	406285dd3997cf51ea59b9d78964adee	f96274f5-4530-4832-8d2e-f866f465a81c	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:02:08	1.7s	stupefied_bassi	OK	7d1cfdae626e3705ea519a7a7b329685	e9c53a4d-25fe-49db-9724-ee4937ef1219	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:02:17	990ms	small_rosalind	OK	1a551038fad3907f3a9edadcaa984c4f	2c3dde34-e589-4fd3-879c-833f2bbc5286	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:02:52	-	kickass_morse	-	05e314c70312af9f8aa555a2d8cd03eb	a753a4a5-ee85-486e-bb5b-5b076a8208ad	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:04:04	-	festering_sanger	-	f2b78bbaad795f505bee9abdb955cba1	f4c243c9-1bdd-4671-860e-947fb1b883cc	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:04:12	914ms	naughty_poisson	OK	fafda568ce168b86f528c525677152df	45e0c7ef-d4d4-4517-bbda-17c1508b82c1	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:04:35	1.4s	scruffy_volta	OK	5ba2c400d8f1a9e64b052f9cd0fcbd87	038bb018-60ba-4bd7-980d-1a46933177ad	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:05:06	-	stupefied_fermat	-	6a719fd8cb414b683aa15c9e825a05d6	10c1399e-5b53-4e42-b3b9-7289919b42f6	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:05:16	1.5s	berserk_mahavira	ERR	c85a42a8f21d868e849b2409460ad943	c620a559-3420-424b-a9ea-0b86d62443fb	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:05:25	-	irreverent_kirch	-	0b29ef8a040a5cf73741dd6b5a98564d	592aff3c-b630-4dee-956b-7585685f19f3	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:05:36	1.7s	prickly_euclid	ERR	83fc7131a2b4d52f29e76f9ea4c14717	048c0c31-0c3a-4f44-984b-f6bf61d31cf7	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:06:59	1.8s	hungry_celsius	OK	e8e496b6582d21a366c1f4f04ece0221	724169e7-1c1a-46bc-8a6b-5c2dc6d8db65	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:07:50	1.6s	fervent_sax	OK	c8408ba1ff75b49544300ec8ef63da35	42462f6d-c231-4f5e-962c-b94929a82fcf	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:08:15	1.5s	goofy_bell	ERR	2e843dfcc116d0d70cd1fe1bba5752b0	35c7f881-550a-4c41-a120-a588ee544854	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:08:26	-	berserk_lamport	-	fe39cd7d08cc2dc1348fa6f69da17033	e0ed0f42-e485-407a-8928-50f234f5b937	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:08:35	-	focused_wright	-	db130444965deb07d312262c5a1f9f8a	85a26aba-28fd-46e3-906c-21c072c6ce3a	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:08:41	1.3s	grave_shannon	OK	7d77e3e64e6b189adeb7ea0b5bb9fbfe	6d96c0d5-cda9-46a6-bfe7-7e4809a6b68c	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:09:20	1.7s	suspicious_swartz	OK	ce94ade4c459ec5fafe24559b4ec3838	49f0c547-95db-4023-a951-c3329a9998f4	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:10:32	-	zen_mccarthy	-	05541fef77c75a54adda1aec464e633a	19458650-cb86-4c91-bf1e-c75047319304	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:11:47	1.5s	lonely_khorana	OK	0122a776db41da5b29397472026265c1	39992c2b-5153-408b-a7aa-ac689bcaca99	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:12:26	1.3s	confident_descartes	ERR	1c345a1310109225d0141338b85fba4c	045ea263-c62f-46fd-83ca-d3f1f80afdf0	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:12:31	1.7s	mad_leakey	OK	0122a776db41da5b29397472026265c1	7c53d579-a0a0-49dc-9608-8264eaadcd90	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:27:41	1.2s	soggy_majorana	ERR	538a41cdee08093b2bd609464b95be3d	c6cb0196-bf40-4e85-8f4a-acd2da632687	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:27:55	1.2s	astonishing_swirles	OK	33ec2b526939b11525c83fa4236005ba	1504d7e4-e31a-431f-ac09-4d67eb11d5d9	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+2022-08-08 15:28:32	1.7s	stoic_poisson	OK	c55a3e85287e048a9552afd74be133f0	ff193008-31fe-4a5f-8023-6afde5185f4e	nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv

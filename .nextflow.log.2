@@ -1,0 +1,73 @@
+Aug-08 15:27:40.553 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+Aug-08 15:27:40.677 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.07.1
+Aug-08 15:27:40.696 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [soggy_majorana] - revision: 538a41cdee
+Aug-08 15:27:40.854 [main] DEBUG nextflow.Session - Session uuid: c6cb0196-bf40-4e85-8f4a-acd2da632687
+Aug-08 15:27:40.854 [main] DEBUG nextflow.Session - Run name: soggy_majorana
+Aug-08 15:27:40.856 [main] DEBUG nextflow.Session - Executor pool size: 8
+Aug-08 15:27:41.057 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.07.1 build 5412
+  Created: 24-07-2020 15:18 UTC (08:18 PDT)
+  System: Mac OS X 10.15.7
+  Runtime: Groovy 2.5.11 on OpenJDK 64-Bit Server VM 11.0.6+8-b765.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 22340@eduroam-169-233-217-67.ucsc.edu [169.233.217.67]
+  CPUs: 8 - Mem: 16 GB (83.2 MB) - Swap: 2 GB (1.1 GB)
+Aug-08 15:27:41.075 [main] DEBUG nextflow.Session - Work-dir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work [Mac OS X]
+Aug-08 15:27:41.142 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Aug-08 15:27:41.144 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-08 15:27:41.337 [main] DEBUG nextflow.Session - Session start invoked
+Aug-08 15:27:41.736 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-08 15:27:41.758 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: 
+Aug-08 15:27:41.876 [main] DEBUG nextflow.Session - Ignite dataflow network (1)
+Aug-08 15:27:41.888 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-08 15:27:41.888 [main] DEBUG nextflow.Session - Session await
+Aug-08 15:27:41.888 [main] DEBUG nextflow.Session - Session await > all process finished
+Aug-08 15:27:41.888 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-08 15:27:41.903 [Actor Thread 2] ERROR nextflow.extension.OperatorEx - @unknown
+groovy.lang.MissingPropertyException: Exception evaluating property 'species' for java.util.ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: species for class: java.lang.String
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.getAtIterable(DefaultGroovyMethods.java:8254)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.getAt(DefaultGroovyMethods.java:8242)
+	at groovy.lang.MetaClassImpl$8.getProperty(MetaClassImpl.java:1967)
+	at org.codehaus.groovy.runtime.callsite.GetEffectivePojoPropertySite.getProperty(GetEffectivePojoPropertySite.java:63)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:298)
+	at Script_85bd8516$_runScript_closure1$_closure2$_closure3.doCall(Script_85bd8516:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:37)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at nextflow.extension.MapOp$_apply_closure1.doCall(MapOp.groovy:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.startTask(DataflowOperatorActor.java:120)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.onMessage(DataflowOperatorActor.java:108)
+	at groovyx.gpars.actor.impl.SDAClosure$1.call(SDAClosure.java:43)
+	at groovyx.gpars.actor.AbstractLoopingActor.runEnhancedWithoutRepliesOnMessages(AbstractLoopingActor.java:293)
+	at groovyx.gpars.actor.AbstractLoopingActor.access$400(AbstractLoopingActor.java:30)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:93)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Aug-08 15:27:41.921 [Actor Thread 2] DEBUG nextflow.Session - Session aborted -- Cause: Exception evaluating property 'species' for java.util.ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: species for class: java.lang.String
+Aug-08 15:27:41.973 [Actor Thread 2] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] map
+  [operator] view
+
+Aug-08 15:27:41.990 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Aug-08 15:27:42.168 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Aug-08 15:27:42.184 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,0 +1,55 @@
+Aug-08 15:08:35.408 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
+Aug-08 15:08:35.515 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.07.1
+Aug-08 15:08:35.528 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [focused_wright] - revision: db13044496
+Aug-08 15:08:35.664 [main] DEBUG nextflow.Session - Session uuid: 85a26aba-28fd-46e3-906c-21c072c6ce3a
+Aug-08 15:08:35.664 [main] DEBUG nextflow.Session - Run name: focused_wright
+Aug-08 15:08:35.666 [main] DEBUG nextflow.Session - Executor pool size: 8
+Aug-08 15:08:35.706 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.07.1 build 5412
+  Created: 24-07-2020 15:18 UTC (08:18 PDT)
+  System: Mac OS X 10.15.7
+  Runtime: Groovy 2.5.11 on OpenJDK 64-Bit Server VM 11.0.6+8-b765.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 14895@eduroam-169-233-217-67.ucsc.edu [169.233.217.67]
+  CPUs: 8 - Mem: 16 GB (219.3 MB) - Swap: 2 GB (1.1 GB)
+Aug-08 15:08:35.722 [main] DEBUG nextflow.Session - Work-dir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work [Mac OS X]
+Aug-08 15:08:35.771 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Aug-08 15:08:35.773 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-08 15:08:35.900 [main] DEBUG nextflow.Session - Session start invoked
+Aug-08 15:08:36.300 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-08 15:08:36.322 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: 
+Aug-08 15:08:36.409 [main] DEBUG nextflow.Session - Session aborted -- Cause: No such property: view for class: groovyx.gpars.dataflow.DataflowBroadcast
+Aug-08 15:08:36.427 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] splitCsv
+
+Aug-08 15:08:36.435 [main] ERROR nextflow.cli.Launcher - @unknown
+groovy.lang.MissingPropertyException: No such property: view for class: groovyx.gpars.dataflow.DataflowBroadcast
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaClassGetPropertySite.getProperty(PojoMetaClassGetPropertySite.java:38)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:298)
+	at Script_c5316fff$_runScript_closure1$_closure2.doCall(Script_c5316fff:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at groovy.lang.Closure.call(Closure.java:399)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:182)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:169)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:52)
+	at nextflow.script.ChainableDef$invoke_a.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:191)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:200)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:219)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:219)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:127)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:274)
+	at nextflow.cli.Launcher.run(Launcher.groovy:466)
+	at nextflow.cli.Launcher.main(Launcher.groovy:648)
