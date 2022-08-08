@@ -22,14 +22,22 @@ if (params.help){
     exit 0
 }
 
+include { liftOver } from './modules.nf'
+
     workflow{
         if ( params.generate_db ){
-        Channel
+        Generate_ch = Channel
             .fromPath(params.species_paths)
             // can't get parser to work with headers
             // workaround for now 
             .splitCsv(header: false, skip:1)
             .map {row -> tuple(row[0], row[1], row[2], row[3])}
-            .view()
+        Human_bed = file(params.human_bed)
+
+        liftOver( 
+            Generate_ch,
+            Human_bed
+        )
+
         }
     }

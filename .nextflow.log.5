@@ -1,28 +1,90 @@
-Aug-08 15:11:47.325 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
-Aug-08 15:11:47.435 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.07.1
-Aug-08 15:11:47.457 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [lonely_khorana] - revision: 0122a776db
-Aug-08 15:11:47.576 [main] DEBUG nextflow.Session - Session uuid: 39992c2b-5153-408b-a7aa-ac689bcaca99
-Aug-08 15:11:47.576 [main] DEBUG nextflow.Session - Run name: lonely_khorana
-Aug-08 15:11:47.578 [main] DEBUG nextflow.Session - Executor pool size: 8
-Aug-08 15:11:47.622 [main] DEBUG nextflow.cli.CmdRun - 
+Aug-08 15:43:20.176 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv --human_bed /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/test.bed
+Aug-08 15:43:20.303 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.07.1
+Aug-08 15:43:20.317 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [grave_sammet] - revision: 63b9d4ee0a
+Aug-08 15:43:20.456 [main] DEBUG nextflow.Session - Session uuid: ef88f565-1f00-4f2c-914a-ec3db878b190
+Aug-08 15:43:20.456 [main] DEBUG nextflow.Session - Run name: grave_sammet
+Aug-08 15:43:20.458 [main] DEBUG nextflow.Session - Executor pool size: 8
+Aug-08 15:43:20.506 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 20.07.1 build 5412
   Created: 24-07-2020 15:18 UTC (08:18 PDT)
   System: Mac OS X 10.15.7
   Runtime: Groovy 2.5.11 on OpenJDK 64-Bit Server VM 11.0.6+8-b765.1
   Encoding: UTF-8 (UTF-8)
-  Process: 16318@eduroam-169-233-217-67.ucsc.edu [169.233.217.67]
-  CPUs: 8 - Mem: 16 GB (268.7 MB) - Swap: 2 GB (1.1 GB)
-Aug-08 15:11:47.638 [main] DEBUG nextflow.Session - Work-dir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work [Mac OS X]
-Aug-08 15:11:47.689 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
-Aug-08 15:11:47.691 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Aug-08 15:11:47.823 [main] DEBUG nextflow.Session - Session start invoked
-Aug-08 15:11:48.199 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Aug-08 15:11:48.221 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: 
-Aug-08 15:11:48.318 [main] DEBUG nextflow.Session - Ignite dataflow network (1)
-Aug-08 15:11:48.326 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-Aug-08 15:11:48.326 [main] DEBUG nextflow.Session - Session await
-Aug-08 15:11:48.326 [main] DEBUG nextflow.Session - Session await > all process finished
-Aug-08 15:11:48.326 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Aug-08 15:11:48.359 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
-Aug-08 15:11:48.459 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
-Aug-08 15:11:48.483 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+  Process: 29423@eduroam-169-233-217-67.ucsc.edu [169.233.217.67]
+  CPUs: 8 - Mem: 16 GB (32.4 MB) - Swap: 5 GB (1.4 GB)
+Aug-08 15:43:20.522 [main] DEBUG nextflow.Session - Work-dir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work [Mac OS X]
+Aug-08 15:43:20.580 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Aug-08 15:43:20.582 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-08 15:43:20.746 [main] DEBUG nextflow.Session - Session start invoked
+Aug-08 15:43:21.239 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-08 15:43:21.325 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: liftOver
+Aug-08 15:43:21.502 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-08 15:43:21.502 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-08 15:43:21.507 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-08 15:43:21.515 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Aug-08 15:43:21.624 [main] DEBUG nextflow.Session - Ignite dataflow network (2)
+Aug-08 15:43:21.639 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > liftOver
+Aug-08 15:43:21.640 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-08 15:43:21.640 [main] DEBUG nextflow.Session - Session await
+Aug-08 15:43:21.655 [Actor Thread 2] ERROR nextflow.extension.OperatorEx - @unknown
+groovy.lang.MissingMethodException: No signature of method: nextflow.script.WorkflowBinding.val() is applicable for argument types: () values: []
+Possible solutions: tap(groovy.lang.Closure), wait(), any(), wait(long), is(java.lang.Object), use([Ljava.lang.Object;)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:98)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:397)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:339)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:821)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:397)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:337)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:64)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at Script_541207eb$_runScript_closure1$_closure2$_closure3.doCall(Script_541207eb:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:37)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at nextflow.extension.MapOp$_apply_closure1.doCall(MapOp.groovy:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.startTask(DataflowOperatorActor.java:120)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.onMessage(DataflowOperatorActor.java:108)
+	at groovyx.gpars.actor.impl.SDAClosure$1.call(SDAClosure.java:43)
+	at groovyx.gpars.actor.AbstractLoopingActor.runEnhancedWithoutRepliesOnMessages(AbstractLoopingActor.java:293)
+	at groovyx.gpars.actor.AbstractLoopingActor.access$400(AbstractLoopingActor.java:30)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:93)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Aug-08 15:43:21.688 [Actor Thread 2] DEBUG nextflow.Session - Session aborted -- Cause: No signature of method: nextflow.script.WorkflowBinding.val() is applicable for argument types: () values: []
+Possible solutions: tap(groovy.lang.Closure), wait(), any(), wait(long), is(java.lang.Object), use([Ljava.lang.Object;)
+Aug-08 15:43:21.711 [Actor Thread 2] DEBUG nextflow.Session - The following nodes are still active:
+[process] liftOver
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: human_bed
+  port 2: (cntrl) -     ; channel: $
+
+Aug-08 15:43:21.714 [main] DEBUG nextflow.Session - Session await > all process finished
+Aug-08 15:43:21.715 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-08 15:43:21.725 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Aug-08 15:43:21.915 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Aug-08 15:43:21.936 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

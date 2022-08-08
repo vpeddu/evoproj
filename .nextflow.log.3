@@ -1,28 +1,46 @@
-Aug-08 15:12:31.524 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv
-Aug-08 15:12:31.654 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.07.1
-Aug-08 15:12:31.671 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [mad_leakey] - revision: 0122a776db
-Aug-08 15:12:31.842 [main] DEBUG nextflow.Session - Session uuid: 7c53d579-a0a0-49dc-9608-8264eaadcd90
-Aug-08 15:12:31.842 [main] DEBUG nextflow.Session - Run name: mad_leakey
-Aug-08 15:12:31.844 [main] DEBUG nextflow.Session - Executor pool size: 8
-Aug-08 15:12:31.888 [main] DEBUG nextflow.cli.CmdRun - 
+Aug-08 15:43:48.760 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv --human_bed /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/test.bed
+Aug-08 15:43:48.884 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.07.1
+Aug-08 15:43:48.897 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [festering_poisson] - revision: 9f2834666e
+Aug-08 15:43:49.021 [main] DEBUG nextflow.Session - Session uuid: b59ba365-0edb-4006-bb7a-dfbfdc67c58a
+Aug-08 15:43:49.021 [main] DEBUG nextflow.Session - Run name: festering_poisson
+Aug-08 15:43:49.023 [main] DEBUG nextflow.Session - Executor pool size: 8
+Aug-08 15:43:49.066 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 20.07.1 build 5412
   Created: 24-07-2020 15:18 UTC (08:18 PDT)
   System: Mac OS X 10.15.7
   Runtime: Groovy 2.5.11 on OpenJDK 64-Bit Server VM 11.0.6+8-b765.1
   Encoding: UTF-8 (UTF-8)
-  Process: 16716@eduroam-169-233-217-67.ucsc.edu [169.233.217.67]
-  CPUs: 8 - Mem: 16 GB (262.4 MB) - Swap: 2 GB (1.1 GB)
-Aug-08 15:12:31.904 [main] DEBUG nextflow.Session - Work-dir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work [Mac OS X]
-Aug-08 15:12:31.955 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
-Aug-08 15:12:31.957 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Aug-08 15:12:32.092 [main] DEBUG nextflow.Session - Session start invoked
-Aug-08 15:12:32.483 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Aug-08 15:12:32.507 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: 
-Aug-08 15:12:32.610 [main] DEBUG nextflow.Session - Ignite dataflow network (1)
-Aug-08 15:12:32.618 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-Aug-08 15:12:32.619 [main] DEBUG nextflow.Session - Session await
-Aug-08 15:12:32.619 [main] DEBUG nextflow.Session - Session await > all process finished
-Aug-08 15:12:32.619 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Aug-08 15:12:32.654 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
-Aug-08 15:12:32.716 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
-Aug-08 15:12:32.735 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+  Process: 29825@eduroam-169-233-217-67.ucsc.edu [169.233.217.67]
+  CPUs: 8 - Mem: 16 GB (94.1 MB) - Swap: 5 GB (1.2 GB)
+Aug-08 15:43:49.082 [main] DEBUG nextflow.Session - Work-dir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work [Mac OS X]
+Aug-08 15:43:49.134 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Aug-08 15:43:49.136 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-08 15:43:49.297 [main] DEBUG nextflow.Session - Session start invoked
+Aug-08 15:43:49.692 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-08 15:43:49.767 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: liftOver
+Aug-08 15:43:49.940 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-08 15:43:49.940 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-08 15:43:49.945 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-08 15:43:49.951 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Aug-08 15:43:50.055 [main] DEBUG nextflow.Session - Ignite dataflow network (2)
+Aug-08 15:43:50.064 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > liftOver
+Aug-08 15:43:50.064 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-08 15:43:50.065 [main] DEBUG nextflow.Session - Session await
+Aug-08 15:43:50.272 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-08 15:43:50.279 [Task submitter] INFO  nextflow.Session - [ea/8765d0] Submitted process > liftOver (3)
+Aug-08 15:43:50.288 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-08 15:43:50.289 [Task submitter] INFO  nextflow.Session - [fd/11f350] Submitted process > liftOver (1)
+Aug-08 15:43:50.295 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-08 15:43:50.295 [Task submitter] INFO  nextflow.Session - [e1/e61146] Submitted process > liftOver (4)
+Aug-08 15:43:50.301 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-08 15:43:50.302 [Task submitter] INFO  nextflow.Session - [44/fda77c] Submitted process > liftOver (2)
+Aug-08 15:43:50.384 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: liftOver (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work/ea/8765d09bcb3f1362f1ced512d61c05]
+Aug-08 15:43:50.392 [Task monitor] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `OUTPUT` -- Initialise it to a default value eg. `params.OUTPUT = some_value`
+Aug-08 15:43:50.412 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: liftOver (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work/fd/11f3508c6cc0bb54098049fbf40b8b]
+Aug-08 15:43:50.418 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: liftOver (4); status: COMPLETED; exit: 0; error: -; workDir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work/e1/e611462fb2a8ee81c5a87ee66eb856]
+Aug-08 15:43:50.443 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: liftOver (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/vikas/Documents/UCSC/lab/kim_lab/TEBAG/work/44/fda77c63da690348b220434f29a3a7]
+Aug-08 15:43:50.451 [main] DEBUG nextflow.Session - Session await > all process finished
+Aug-08 15:43:50.475 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-08 15:43:50.481 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=4; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=11ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Aug-08 15:43:50.602 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Aug-08 15:43:50.629 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
