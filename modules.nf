@@ -9,6 +9,7 @@ input:
 
 output: 
     tuple val(species), file("*.check.lifted.bed"), file("*.check.unlifted.bed")
+    file ("*.check.lifted.bed")
 
 script:
 """
@@ -29,7 +30,7 @@ process tebag_intersect {
 container "vpeddu/tebag:latest"
 beforeScript 'chmod o+rw .'
 input: 
-    tuple val(species), file(lifted_bed), file(unlifted_bed)
+    file lifted_beds
     file human_bed
     file intersect_elements_script
 
