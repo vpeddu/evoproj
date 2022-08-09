@@ -11,7 +11,7 @@ with open(sys.argv[1], 'rb') as f:
 
 #quant_file = pd.read_csv (sys.argv[2], sep='\t', header=0)
 quant_file = pd.read_csv(sys.argv[2], sep = '\t', header = 0)
-from IPython import embed; embed()
+#from IPython import embed; embed()
 # removing non-TE rows
 TE_quants = quant_file[quant_file["insertion"].str.contains("ENST")==False]
 TE_quants = TE_quants[TE_quants["insertion"].str.contains("\)n")==False]
