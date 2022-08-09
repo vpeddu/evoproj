@@ -47,7 +47,7 @@ def check_if_in_species(row):
     return new_row
 
 TE_insertions['insertion_status'] = TE_insertions.apply(lambda row: check_if_in_species(row), axis=1)
-TE_quants = TE_quants.merge(TE_insertions, left_on='insertion', right_on = 'Human')
+TE_quants = TE_quants.merge(TE_insertions, left_on='insertion', right_on = 'element')
 
 # LI = check_if_in_species(TE_quants.loc['AluSc_range=chrY:57202568-57202876_strand=+'], TE_DB)
 # #species_TE_df = pd.concat([species_TE_df,LI])
