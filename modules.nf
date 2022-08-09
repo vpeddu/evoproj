@@ -47,3 +47,28 @@ python3 ${intersect_elements_script} ${human_bed}
 
 """
 }
+
+
+process tebag_match { 
+//conda "${baseDir}/env/env.yml"
+publishDir "${params.OUTPUT}/TEbAG_match/", mode: 'copy', overwrite: true
+container "vpeddu/tebag:latest"
+beforeScript 'chmod o+rw .'
+input: 
+    file database_plk
+    file quant_file
+    file match_script
+
+output: 
+    file 'merged_species_TE_df.TEBAG.csv'
+
+script:
+"""
+#!/bin/bash
+
+ls -lah
+
+python3 ${match_script} ${database_pkl} ${quant_file}
+
+"""
+}

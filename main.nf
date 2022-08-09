@@ -22,8 +22,12 @@ if (params.help){
     exit 0
 }
 
+// TODO: make modules file specific for tebag generate
 include { liftOver } from './modules.nf'
 include { tebag_intersect } from './modules.nf'
+include { tebag_match} from './modules.nf'
+
+
 
     workflow{
         if ( params.generate_db ){
@@ -47,5 +51,14 @@ include { tebag_intersect } from './modules.nf'
 
 
         )
+        }
+        else{ 
+
+            tebag_match(
+            file(params.tebag_db)
+            file(params.quantification_file)
+            file("${baseDir}/bin/tebag_match.py")
+            )
+
         }
     }
