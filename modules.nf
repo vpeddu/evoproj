@@ -26,7 +26,7 @@ ls -lah
 
 process tebag_intersect { 
 //conda "${baseDir}/env/env.yml"
-//publishDir "${params.OUTPUT}/fastp_PE/${base}", mode: 'symlink', overwrite: true
+publishDir "${params.OUTPUT}/TEbAG_DB/", mode: 'copy', overwrite: true
 container "vpeddu/tebag:latest"
 beforeScript 'chmod o+rw .'
 input: 
@@ -35,7 +35,7 @@ input:
     file intersect_elements_script
 
 output: 
-    tuple val(species), file("*.check.lifted.bed"), file("*.check.unlifted.bed")
+    tuple file("TEbag_DB.pkl"), file("intersection_table.csv")
 
 script:
 """
