@@ -55,7 +55,7 @@ publishDir "${params.OUTPUT}/TEbAG_match/", mode: 'copy', overwrite: true
 container "vpeddu/tebag:latest"
 beforeScript 'chmod o+rw .'
 input: 
-    file database_plk
+    file database_pkl
     file quant_file
     file match_script
 
