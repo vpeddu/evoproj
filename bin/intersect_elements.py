@@ -19,7 +19,7 @@ def read_bed(bedpath):
     element_dict = {}
     with open(bedpath) as openbed:
         lines = [line for line in openbed]
-    for element in tqdm(lines, total = len(lines)): 
+    for element in lines: 
 
         ename = element.split()[3]
         echr = element.split()[0]
