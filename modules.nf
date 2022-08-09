@@ -22,3 +22,27 @@ ls -lah
 
 """
 }
+
+process tebag_intersect { 
+//conda "${baseDir}/env/env.yml"
+//publishDir "${params.OUTPUT}/fastp_PE/${base}", mode: 'symlink', overwrite: true
+container "vpeddu/tebag:latest"
+beforeScript 'chmod o+rw .'
+input: 
+    tuple val(species), file(lifted_bed), file(unlifted_bed)
+    file human_bed
+    file intersect_elements_script
+
+output: 
+    tuple val(species), file("*.check.lifted.bed"), file("*.check.unlifted.bed")
+
+script:
+"""
+#!/bin/bash
+
+ls -lah
+
+python3 ${intersect_elements_script} ${human_bed}
+
+"""
+}

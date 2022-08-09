@@ -23,6 +23,7 @@ if (params.help){
 }
 
 include { liftOver } from './modules.nf'
+include { tebag_intersect } from './modules.nf'
 
     workflow{
         if ( params.generate_db ){
@@ -39,6 +40,12 @@ include { liftOver } from './modules.nf'
             Generate_ch,
             Human_bed
         )
+        tebag_intersect( 
+            liftOver.collect(),
+            Human_bed,
+            file("${baseDir}/intersect_elements.py")
 
+
+        )
         }
     }

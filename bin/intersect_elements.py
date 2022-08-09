@@ -4,11 +4,6 @@ import csv
 import glob
 import pickle 
 import pandas as pd
-from tqdm import tqdm
-from operator import ne
-from cv2 import absdiff
-from imp import cache_from_source
-from multiprocessing import sharedctypes
 
 class repeat_element():
     def __init__(self, chromosome, start, stop, name, score, strand):
@@ -71,47 +66,52 @@ def create_intersections(ns, os):
     o = find_old_unique(ns,os)
     return [s, n, o]
     
-
-
-Human_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/human_bed/ucsc.rmsk.salmon.bed')
-Human_Chimp_lifted_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/lifted_beds/Human.Chimp.check.lifted.bed')
-Human_Gorilla_lifted_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/lifted_beds/Human.Gorilla.check.lifted.bed')
-Human_Orangutan_lifted_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/lifted_beds/Human.Orangutan.check.lifted.bed')
-Human_Bonobo_lifted_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/lifted_beds/Human.Bonobo.check.lifted.bed')
-
-HC_comp = create_intersections(Human_bed, Human_Chimp_lifted_bed)
-HG_comp = create_intersections(Human_bed, Human_Gorilla_lifted_bed)
-HO_comp = create_intersections(Human_bed, Human_Orangutan_lifted_bed)
-HB_comp = create_intersections(Human_bed, Human_Bonobo_lifted_bed)
-
-species = ['Human','Chimp','Gorilla', 'Orangutan','Bonobo']
-intersection_table = pd.DataFrame(index=range(len(Human_bed.name)),columns=species)
-intersection_table['Human'] = Human_bed.name
-
 def check_if_intersects(df_index, comp_object): 
     if df_index[0] in comp_object[0]:
         return True
     else:
         return False
 
-tqdm.pandas()
-intersection_table['Chimp'] = intersection_table.progress_apply(check_if_intersects, comp_object = HC_comp, axis = 1)
-intersection_table['Gorilla'] = intersection_table.progress_apply(check_if_intersects, comp_object = HG_comp, axis = 1)
-intersection_table['Orangutan'] = intersection_table.progress_apply(check_if_intersects, comp_object = HO_comp, axis = 1)
-intersection_table['Bonobo'] = intersection_table.progress_apply(check_if_intersects, comp_object = HB_comp, axis = 1)
+# Human_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/human_bed/ucsc.rmsk.salmon.bed')
+# Human_Chimp_lifted_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/lifted_beds/Human.Chimp.check.lifted.bed')
+# Human_Gorilla_lifted_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/lifted_beds/Human.Gorilla.check.lifted.bed')
+# Human_Orangutan_lifted_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/lifted_beds/Human.Orangutan.check.lifted.bed')
+# Human_Bonobo_lifted_bed = read_bed('/Volumes/metagenomics_drive/liftover_project/lifted_beds/Human.Bonobo.check.lifted.bed')
+
+# HC_comp = create_intersections(Human_bed, Human_Chimp_lifted_bed)
+# HG_comp = create_intersections(Human_bed, Human_Gorilla_lifted_bed)
+# HO_comp = create_intersections(Human_bed, Human_Orangutan_lifted_bed)
+# HB_comp = create_intersections(Human_bed, Human_Bonobo_lifted_bed)
+
+# species = ['Human','Chimp','Gorilla', 'Orangutan','Bonobo']
+# intersection_table = pd.DataFrame(index=range(len(Human_bed.name)),columns=species)
+# intersection_table['Human'] = Human_bed.name
+
+# intersection_table['Chimp'] = intersection_table.progress_apply(check_if_intersects, comp_object = HC_comp, axis = 1)
+# intersection_table['Gorilla'] = intersection_table.progress_apply(check_if_intersects, comp_object = HG_comp, axis = 1)
+# intersection_table['Orangutan'] = intersection_table.progress_apply(check_if_intersects, comp_object = HO_comp, axis = 1)
+# intersection_table['Bonobo'] = intersection_table.progress_apply(check_if_intersects, comp_object = HB_comp, axis = 1)
+
+human_bed_path = sys.argv[1]
+lifted_files = glob.glob("*.check.lifted.bed")
+species_comparisons = {}
+human_bed = read_bed(human_bed_path)
+
+for file in lifted_files: 
+    species_name = file.split('.')[0]
+    current_bed = read_bed(file)
+    species_comp = create_intersections(human_bed, current_bed)
+    species_comparisons[species_name] = species_comp
+    
+species = species_comparisons.keys()
+intersection_table = pd.DataFrame(index=range(len(human_bed.name)),columns=species)
+intersection_table['element'] = human_bed.name
+
+for comp in species_comparisons.keys():
+    intersection_table[comp] = intersection_table.apply(check_if_intersects, comp_object = species_comparisons[comp], axis = 1)
+    
 
 intersection_table.to_csv("intersection_table.csv")
-# for ind in tqdm.tqdm(intersection_table.index, total = len(intersection_table.index)):
-#     intersection_table['Chimp'] = check_if_intersects(intersection_table, ind, HC_comp)
-#     intersection_table['Gorilla'] = check_if_intersects(intersection_table, ind, HG_comp)
-#     intersection_table['Orangutan'] = check_if_intersects(intersection_table, ind, HO_comp)
-#     intersection_table['Bonobo'] = check_if_intersects(intersection_table, ind, HB_comp)
-
-
-# need to make csvwriter
-#cw = csv.writer(open("chimp_gorilla_intersection.csv",'w'))
-#cw.writerows(list(chimp_gorilla_intersections[0]))
-
 
 TE_DB = open('TEbag_DB.pkl', 'wb') 
 pickle.dump(intersection_table, TE_DB)
