@@ -28,7 +28,7 @@ include { tebag_intersect } from './modules.nf'
 include { tebag_match} from './modules.nf'
 
 
-params.generate_db = False
+params.generate_db = false
 
     workflow{
         if ( params.generate_db ){
