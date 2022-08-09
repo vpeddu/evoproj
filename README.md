@@ -14,3 +14,8 @@
 	- take this, use to filter our bed, use as test
 - Paper: re-process some data, demonstrate performance  
 - Undergrads: how to get involved
+
+### sample run command 
+```
+nextflow run main.nf --generate_db --species_paths bin/sample_generate_csv.csv --human_bed ../beds/ucsc.rmsk.salmon.bed -with-docker ubuntu:18.04 -resume 
+```
