@@ -40,7 +40,7 @@ def append_to_new_df(index, lookup_table, append_df):
 
 TE_insertions = TE_quants['insertion']
 TE_insertions = TE_insertions.to_frame()
-TE_insertions = TE_insertions.merge(TE_DB, left_on = 'insertion', right_on = 'Human')
+TE_insertions = TE_insertions.merge(TE_DB, left_on = 'insertion', right_on = 'element')
 
 def check_if_in_species(row):
     new_row = [row['Chimp'],row['Gorilla'],row['Orangutan'],row['Bonobo']]
