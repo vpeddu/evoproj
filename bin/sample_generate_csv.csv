@@ -2,4 +2,4 @@
 Chimp,/private/groups/kimlab/vikas/liftover_tool/chains/Chimp-Human.chain.gz,/private/groups/kimlab/vikas/liftover_tool/chains/Human-Chimp.chain.gz,1
 Bonobo,/private/groups/kimlab/vikas/liftover_tool/chains/Bonobo-Human.chain.gz,/private/groups/kimlab/vikas/liftover_tool/chains/Human-Bonobo.chain.gz,2
 Gorilla,/private/groups/kimlab/vikas/liftover_tool/chains/Gorilla-Human.chain.gz,/private/groups/kimlab/vikas/liftover_tool/chains/Human-Gorilla.chain.gz,3
-Orangutan,/private/groups/kimlab/vikas/liftover_tool/chains/Orangutan-Human.chain.gz,/
+Orangutan,/private/groups/kimlab/vikas/liftover_tool/chains/Orangutan-Human.chain.gz,/private/groups/kimlab/vikas/liftover_tool/chains/Human-Orangutan.chain.gz,4

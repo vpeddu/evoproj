@@ -15,7 +15,7 @@ class repeat_element():
         self.strand = strand
 
 def read_bed(bedpath): 
-    print('reading bed')
+    print('reading bed ' + str(bedpath))
     element_dict = {}
     with open(bedpath) as openbed:
         lines = [line for line in openbed]
