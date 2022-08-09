@@ -27,7 +27,7 @@ include { liftOver } from './modules.nf'
 include { tebag_intersect } from './modules.nf'
 include { tebag_match} from './modules.nf'
 
-
+params.generate_db = False
 
     workflow{
         if ( params.generate_db ){
