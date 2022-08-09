@@ -56,8 +56,8 @@ params.generate_db = false
         else{ 
 
             tebag_match(
-            file(params.tebag_db)
-            file(params.quantification_file)
+            file(params.tebag_db),
+            file(params.quantification_file),
             file("${baseDir}/bin/tebag_match.py")
             )
 
