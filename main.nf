@@ -43,7 +43,7 @@ include { tebag_intersect } from './modules.nf'
         tebag_intersect( 
             liftOver.collect(),
             Human_bed,
-            file("${baseDir}/intersect_elements.py")
+            file("${baseDir}/bin/intersect_elements.py")
 
 
         )
