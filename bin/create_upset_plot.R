@@ -2,7 +2,10 @@ library(tidyverse)
 library(ggupset)
 library(ggplot2)
 
-tmp <- read_csv(file.path('/Volumes/metagenomics_drive/liftover_project/test_files/merged_species_TE_df.TEBAG.csv'))
+args = commandArgs(trailingOnly=TRUE)
+
+#vikas_path = '/Volumes/metagenomics_drive/liftover_project/test_files/merged_species_TE_df.TEBAG.csv'
+tmp <- read_csv(file.path(args[1]))
 
 print('file read in')
 

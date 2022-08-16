@@ -69,3 +69,25 @@ ls -lah
 python3 ${match_script} ${database_pkl} ${quant_file}
 """
 }
+
+process upset_plot { 
+//conda "${baseDir}/env/env.yml"
+publishDir "${params.OUTPUT}/upset_plot/", mode: 'copy', overwrite: true
+container "vpeddu/tebag:latest"
+beforeScript 'chmod o+rw .'
+input: 
+    file upset_plot_script
+    file TEBAG_MERGED
+
+output: 
+    file 'upset_plot.pdf'
+
+script:
+"""
+#!/bin/bash
+
+ls -lah
+
+Rscript --vanilla ${upset_plot_script} ${TEBAG_MERGED}
+"""
+}

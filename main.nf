@@ -26,7 +26,7 @@ if (params.help){
 include { liftOver } from './modules.nf'
 include { tebag_intersect } from './modules.nf'
 include { tebag_match} from './modules.nf'
-
+include { upset_plot } from './modules.nf'
 
 params.generate_db = false
 
@@ -56,6 +56,10 @@ params.generate_db = false
             file(params.tebag_db),
             file(params.quantification_file),
             file("${baseDir}/bin/tebag_match.py")
+            )
+            upset_plot(
+            file("${baseDir}/bin/create_upset_plot.R")
+            tebag_match.out
             )
         }
     }
