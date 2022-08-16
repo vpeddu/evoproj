@@ -1,4 +1,4 @@
-process liftOver { 
+process LiftOver { 
 //conda "${baseDir}/env/env.yml"
 //publishDir "${params.OUTPUT}/fastp_PE/${base}", mode: 'symlink', overwrite: true
 container "quay.io/biocontainers/ucsc-liftover:377--ha8a8165_4"
@@ -24,7 +24,7 @@ ls -lah
 """
 }
 
-process tebag_intersect { 
+process Tebag_intersect { 
 //conda "${baseDir}/env/env.yml"
 publishDir "${params.OUTPUT}/TEbAG_DB/", mode: 'copy', overwrite: true
 container "vpeddu/tebag:latest"
@@ -47,7 +47,7 @@ python3 ${intersect_elements_script} ${human_bed}
 """
 }
 
-process tebag_match { 
+process Tebag_match { 
 //conda "${baseDir}/env/env.yml"
 publishDir "${params.OUTPUT}/TEbAG_match/", mode: 'copy', overwrite: true
 container "vpeddu/tebag:latest"
@@ -70,7 +70,7 @@ python3 ${match_script} ${database_pkl} ${quant_file}
 """
 }
 
-process upset_plot { 
+process Upset_plot { 
 //conda "${baseDir}/env/env.yml"
 publishDir "${params.OUTPUT}/upset_plot/", mode: 'copy', overwrite: true
 container "vpeddu/tebag:latest"
