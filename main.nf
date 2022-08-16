@@ -41,25 +41,25 @@ params.generate_db = false
 
         Human_bed = file(params.human_bed)
 
-        liftOver( 
+        LiftOver( 
             Generate_ch,
             Human_bed
         )
-        tebag_intersect( 
+        Tebag_intersect( 
             liftOver.out[1].collect(),
             Human_bed,
             file("${baseDir}/bin/intersect_elements.py")
         )
         }
         else{ 
-            tebag_match(
+            Tebag_match(
             file(params.tebag_db),
             file(params.quantification_file),
             file("${baseDir}/bin/tebag_match.py")
             )
-            upset_plot(
+            Upset_plot(
             file("${baseDir}/bin/create_upset_plot.R")
-            tebag_match.out
+            Tebag_match.out
             )
         }
     }
