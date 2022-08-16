@@ -49,17 +49,13 @@ params.generate_db = false
             liftOver.out[1].collect(),
             Human_bed,
             file("${baseDir}/bin/intersect_elements.py")
-
-
         )
         }
         else{ 
-
             tebag_match(
             file(params.tebag_db),
             file(params.quantification_file),
             file("${baseDir}/bin/tebag_match.py")
             )
-
         }
     }

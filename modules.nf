@@ -44,10 +44,8 @@ script:
 ls -lah
 
 python3 ${intersect_elements_script} ${human_bed}
-
 """
 }
-
 
 process tebag_match { 
 //conda "${baseDir}/env/env.yml"
@@ -69,6 +67,5 @@ script:
 ls -lah
 
 python3 ${match_script} ${database_pkl} ${quant_file}
-
 """
 }
