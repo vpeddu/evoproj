@@ -23,10 +23,10 @@ if (params.help){
 }
 
 // TODO: make modules file specific for tebag generate
-include { liftOver } from './modules.nf'
-include { tebag_intersect } from './modules.nf'
-include { tebag_match} from './modules.nf'
-include { upset_plot } from './modules.nf'
+include { LiftOver } from './modules.nf'
+include { Tebag_intersect } from './modules.nf'
+include { Tebag_match} from './modules.nf'
+include { Upset_plot } from './modules.nf'
 
 params.generate_db = false
 
