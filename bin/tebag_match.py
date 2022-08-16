@@ -28,25 +28,26 @@ TE_quants_dict = TE_quants.to_dict()
 #TE_quants = TE_quants[TE_quants["TPM"] > 0
 #TE_quants = TE_quants.reset_index(drop = True)
 
-species = ['Human','Chimp','Gorilla', 'Orangutan','Bonobo']
+species = list(TE_DB.columns)[:-1]
+species.insert(0,'Human')
 species_TE_df = pd.DataFrame(index=range(0),columns=species)
 
-def append_to_new_df(index, lookup_table, append_df):
-    species_lookup = check_if_in_species(index, lookup_table)
-    return species_lookup
-    #print(species_lookup)
-    #append_df = pd.concat([append_df,species_lookup])
-    #return append_df
+# def append_to_new_df(index, lookup_table, append_df):
+#     species_lookup = check_if_in_species(index, lookup_table)
+#     return species_lookup
+#     #print(species_lookup)
+#     #append_df = pd.concat([append_df,species_lookup])
+#     #return append_df
 
 TE_insertions = TE_quants['insertion']
 TE_insertions = TE_insertions.to_frame()
 TE_insertions = TE_insertions.merge(TE_DB, left_on = 'insertion', right_on = 'element')
 
-def check_if_in_species(row):
-    new_row = [row['Chimp'],row['Gorilla'],row['Orangutan'],row['Bonobo']]
-    return new_row
+# def check_if_in_species(row):
+#     new_row = [row['Chimp'],row['Gorilla'],row['Orangutan'],row['Bonobo']]
+#     return new_row
 
-TE_insertions['insertion_status'] = TE_insertions.apply(lambda row: check_if_in_species(row), axis=1)
+#TE_insertions['insertion_status'] = TE_insertions.apply(lambda row: check_if_in_species(row), axis=1)
 TE_quants = TE_quants.merge(TE_insertions, left_on='insertion', right_on = 'element')
 
 # LI = check_if_in_species(TE_quants.loc['AluSc_range=chrY:57202568-57202876_strand=+'], TE_DB)
