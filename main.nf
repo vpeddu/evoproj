@@ -58,7 +58,7 @@ params.generate_db = false
             file("${baseDir}/bin/tebag_match.py")
             )
             Upset_plot(
-            file("${baseDir}/bin/create_upset_plot.R")
+            file("${baseDir}/bin/create_upset_plot.R"),
             Tebag_match.out
             )
         }
