@@ -46,7 +46,7 @@ params.generate_db = false
             Human_bed
         )
         Tebag_intersect( 
-            liftOver.out[1].collect(),
+            LiftOver.out[1].collect(),
             Human_bed,
             file("${baseDir}/bin/intersect_elements.py")
         )
