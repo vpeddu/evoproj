@@ -82,7 +82,6 @@ input:
 output: 
     file 'upset_plot.pdf'
 
-script:
 """
 #!/bin/bash
 
