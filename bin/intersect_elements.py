@@ -67,7 +67,7 @@ def create_intersections(ns, os):
     return [s, n, o]
     
 def check_if_intersects(df_index, comp_object): 
-    if df_index[0] in comp_object[0]:
+    if df_index['element'] in comp_object[0]:
         return True
     else:
         return False
@@ -90,6 +90,11 @@ intersection_table['element'] = human_bed.name
 for comp in species_comparisons.keys():
     intersection_table[comp] = intersection_table.apply(check_if_intersects, comp_object = species_comparisons[comp], axis = 1)
     
+appended_column_names = list(intersection_table.columns)
+for i in range((len(appended_column_names) - 1)):
+    appended_column_names[i] = ('species_' + str(appended_column_names[i]))
+
+intersection_table.columns = appended_column_names
 
 intersection_table.to_csv("intersection_table.csv")
 
