@@ -44,8 +44,15 @@ TE_insertions = TE_insertions.to_frame()
 TE_insertions = TE_insertions.merge(TE_DB, left_on = 'insertion', right_on = 'element')
 
 def check_if_in_species(row):
-    new_row = [row['species_Chimp'],row['species_Gorilla'],row['species_Orangutan'],row['species_Bonobo']]
+   #new_row = [row['species_Chimp'],row['species_Gorilla'],row['species_Orangutan'],row['species_Bonobo']]
+    #new_row = [row['species_Orangutan'],row['species_Rhesus_macaque'],row['species_Snub_monkey'],row['species_Crab_macaque'],row['species_Bonobo'],row['species_Chimp'],row['species_Marmoset'],row['species_Gorilla'],row['species_Baboon'],row['species_Green_monkey']]
+    species_cols = row.filter(like = 'species')
+    #print(species_cols)
+    #print(new_row)
+    new_row = [val for val in species_cols]
+    #print(new_row)
     return new_row
+
 
 TE_insertions['insertion_status'] = TE_insertions.apply(lambda row: check_if_in_species(row), axis=1)
 TE_quants = TE_quants.merge(TE_insertions, left_on='insertion', right_on = 'element')
