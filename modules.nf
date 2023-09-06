@@ -108,12 +108,12 @@ output:
 #!/bin/bash
 ls -lah
 
-    cactus-hal2chains --refGenome ${name} \
+    cactus-hal2chains --refGenome \$( echo -n ${name}) \
         --targetGenomes Homo_sapiens \
         --defaultCores ${task.cpus} \
         --defaultMemory 24G \
         --maxMemory 32G \
-        --latest chain_tmp ${halfile} ${name}.human.output
+        --latest chain_tmp ${halfile} \$( echo -n ${name}).human.output
 """
 }
 
@@ -136,11 +136,11 @@ output:
 ls -lah
 
     cactus-hal2chains --refGenome Homo_sapiens \
-        --targetGenomes ${name} \
+        --targetGenomes \$( echo -n ${name}) \
         --defaultCores ${task.cpus} \
         --defaultMemory 24G \
         --maxMemory 32G \
-        --latest chain_tmp ${halfile} human.${name}.output
+        --latest chain_tmp ${halfile} human.\$( echo -n ${name}).output
 """
 }
 
