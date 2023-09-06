@@ -90,3 +90,57 @@ ls -lah
 Rscript --vanilla ${upset_plot_script} ${TEBAG_MERGED}
 """
 }
+
+process Hal2chain_to_human { 
+//conda "${baseDir}/env/env.yml"
+publishDir "${params.OUTPUT}/upset_plot/", mode: 'copy', overwrite: true
+container "quay.io/comparative-genomics-toolkit/cactus:v2.6.7"
+beforeScript 'chmod o+rw .'
+cpus 16 
+memory '32 GB'
+input: 
+    value name
+    halfile
+
+output: 
+    tuple val(name), file("${name}-human.output/${name}-human.chain.gz")
+"""
+#!/bin/bash
+ls -lah
+
+    cactus-hal2chains --refGenome ${name} \
+        --targetGenomes Homo_sapiens \
+        --defaultCores ${task.cpus} \
+        --defaultMemory 24G \
+        --maxMemory 32G \
+        --latest \${RANDOM}.chain_tmp ${halfile} ${name}-human.output
+"""
+}
+
+process Hal2chain_from_human { 
+//conda "${baseDir}/env/env.yml"
+publishDir "${params.OUTPUT}/upset_plot/", mode: 'copy', overwrite: true
+container "quay.io/comparative-genomics-toolkit/cactus:v2.6.7"
+beforeScript 'chmod o+rw .'
+cpus 16 
+memory '32 GB'
+input: 
+    value name
+    halfile
+
+output: 
+    tuple val(name), file("human-${name}.output/human-${name}.chain.gz")
+
+"""
+#!/bin/bash
+ls -lah
+
+    cactus-hal2chains --refGenome Homo-sapiens \
+        --targetGenomes ${name} \
+        --defaultCores ${task.cpus} \
+        --defaultMemory 24G \
+        --maxMemory 32G \
+        --latest \${RANDOM}.chain_tmp ${halfile} human-${name}.output
+"""
+}
+
