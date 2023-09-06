@@ -103,7 +103,7 @@ input:
     file halfile
 
 output: 
-    tuple val(name), file("${name}-human.output/${name}-human.chain.gz")
+    tuple val(name), file("${name}-human.output/${name}.human.chain.gz")
 """
 #!/bin/bash
 ls -lah
@@ -113,7 +113,7 @@ ls -lah
         --defaultCores ${task.cpus} \
         --defaultMemory 24G \
         --maxMemory 32G \
-        --latest chain_tmp ${halfile} ${name}-human.output
+        --latest chain_tmp ${halfile} ${name}.human.output
 """
 }
 
@@ -129,7 +129,7 @@ input:
     file halfile
 
 output: 
-    tuple val(name), file("human-${name}.output/human-${name}.chain.gz")
+    tuple val(name), file("human-${name}.output/human.${name}.chain.gz")
 
 """
 #!/bin/bash
@@ -140,7 +140,7 @@ ls -lah
         --defaultCores ${task.cpus} \
         --defaultMemory 24G \
         --maxMemory 32G \
-        --latest chain_tmp ${halfile} human-${name}.output
+        --latest chain_tmp ${halfile} human.${name}.output
 """
 }
 
