@@ -135,7 +135,7 @@ output:
 #!/bin/bash
 ls -lah
 
-    cactus-hal2chains --refGenome Homo-sapiens \
+    cactus-hal2chains --refGenome Homo_sapiens \
         --targetGenomes ${name} \
         --defaultCores ${task.cpus} \
         --defaultMemory 24G \
