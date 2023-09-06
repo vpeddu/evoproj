@@ -29,6 +29,7 @@ include { Tebag_match} from './modules.nf'
 include { Upset_plot } from './modules.nf'
 include { Hal2chain_to_human } from './modules.nf'
 include { Hal2chain_from_human } from './modules.nf'
+include { LiftOver_hal } from './modules.nf'
 
 params.generate_db = false
 
@@ -40,6 +41,8 @@ params.generate_db = false
                 .fromPath( params.NAMES_CSV )
                 .splitText()
             
+            Human_bed = file(params.human_bed)
+
             Hal2chain_to_human(
                 Species_name_Ch,
                 file(params.HAL_FILE)
@@ -47,6 +50,17 @@ params.generate_db = false
             Hal2chain_from_human(
                 Species_name_Ch,
                 file(params.HAL_FILE)
+            )
+
+            LiftOver_hal(
+                Hal2chain_to_human.groupTuple(Hal2chain_from_human,
+                size:2),
+                Human_bed
+            )
+            Tebag_intersect( 
+                LiftOver_hal.out[1].collect(),
+                Human_bed,
+                file("${baseDir}/bin/intersect_elements.py")
             )
 
             }
