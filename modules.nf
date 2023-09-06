@@ -99,8 +99,8 @@ beforeScript 'chmod o+rw .'
 cpus 16 
 memory '32 GB'
 input: 
-    value name
-    halfile
+    val name
+    file halfile
 
 output: 
     tuple val(name), file("${name}-human.output/${name}-human.chain.gz")
@@ -125,8 +125,8 @@ beforeScript 'chmod o+rw .'
 cpus 16 
 memory '32 GB'
 input: 
-    value name
-    halfile
+    val name
+    file halfile
 
 output: 
     tuple val(name), file("human-${name}.output/human-${name}.chain.gz")
