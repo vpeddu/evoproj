@@ -140,7 +140,7 @@ ls -lah
         --defaultCores ${task.cpus} \
         --defaultMemory 24G \
         --maxMemory 32G \
-        --latest \${RANDOM}.chain_tmp ${halfile} human-${name}.output
+        --latest chain_tmp ${halfile} human-${name}.output
 """
 }
 
