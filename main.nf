@@ -53,7 +53,7 @@ params.generate_db = false
             )
 
             LiftOver_hal(
-                Hal2chain_to_human.mix(Hal2chain_from_human).groupTuple(size:2),
+                Hal2chain_to_human.out.mix(Hal2chain_from_human.out).groupTuple(size:2),
                 Human_bed
             )
             Tebag_intersect( 
