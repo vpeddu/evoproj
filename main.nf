@@ -38,7 +38,7 @@ params.generate_db = false
 
             Species_name_Ch = Channel
                 .fromPath( params.NAMES_CSV )
-                .splitText(strip = True)
+                .splitText(strip:True)
             
             Hal2chain_to_human(
                 Species_name_Ch,
