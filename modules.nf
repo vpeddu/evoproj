@@ -24,7 +24,7 @@ ls -lah
 """
 }
 
-process Tebag_intersect { 
+process Evo_intersect { 
 //conda "${baseDir}/env/env.yml"
 publishDir "${params.OUTPUT}/TEbAG_DB/", mode: 'copy', overwrite: true
 container "vpeddu/tebag:latest"
@@ -47,7 +47,7 @@ python3 ${intersect_elements_script} ${human_bed}
 """
 }
 
-process Tebag_match { 
+process Evo_match { 
 //conda "${baseDir}/env/env.yml"
 publishDir "${params.OUTPUT}/TEbAG_match/", mode: 'copy', overwrite: true
 container "vpeddu/tebag:latest"
@@ -101,19 +101,21 @@ memory '32 GB'
 input: 
     val name
     file halfile
+    val human_name
 
 output: 
-    tuple val(name), file("${name}-human.output/${name}.human.chain.gz")
+    tuple val(name), file("${name}.human.output/${name}.human.chain.gz")
 """
 #!/bin/bash
 ls -lah
 
-    cactus-hal2chains --refGenome \$( echo -n ${name}) \
-        --targetGenomes Homo_sapiens \
+    cactus-hal2chains --refGenome ${name} \
+        --targetGenomes ${human_name} \
         --defaultCores ${task.cpus} \
         --defaultMemory 24G \
         --maxMemory 32G \
-        --latest chain_tmp ${halfile} \$( echo -n ${name}).human.output
+        --latest chain_tmp ${halfile} ${name}.human.output
+    mv ${name}.human.output/${human_name}.chain.gz ${name}.human.output/${name}.human.chain.gz
 """
 }
 
@@ -127,26 +129,28 @@ memory '32 GB'
 input: 
     val name
     file halfile
+    val human_name
 
 output: 
-    tuple val(name), file("human-${name}.output/human.${name}.chain.gz")
+    tuple val(name), file("human.${name}.output/human.${name}.chain.gz")
 
 """
 #!/bin/bash
 ls -lah
 
-    cactus-hal2chains --refGenome Homo_sapiens \
-        --targetGenomes \$( echo -n ${name}) \
+    cactus-hal2chains --refGenome ${human_name} \
+        --targetGenomes ${name} \
         --defaultCores ${task.cpus} \
         --defaultMemory 24G \
         --maxMemory 32G \
-        --latest chain_tmp ${halfile} human.\$( echo -n ${name}).output
+        --latest chain_tmp ${halfile} human.${name}.output
+    mv human.${name}.output/${name}.chain.gz human.${name}.output/human.${name}.chain.gz
 """
 }
 
 process LiftOver_hal { 
 //conda "${baseDir}/env/env.yml"
-//publishDir "${params.OUTPUT}/fastp_PE/${base}", mode: 'symlink', overwrite: true
+publishDir "${params.OUTPUT}/LiftOver/${species}", mode: 'copy', overwrite: true
 container "quay.io/biocontainers/ucsc-liftover:377--ha8a8165_4"
 beforeScript 'chmod o+rw .'
 input: 
@@ -155,7 +159,8 @@ input:
 
 output: 
     tuple val(species), file("*.check.lifted.bed"), file("*.check.unlifted.bed")
-    file ("*.check.lifted.bed")
+    file ("*.check*.bed")
+    file ("*.first*.bed")
 
 script:
 """
@@ -163,9 +168,17 @@ script:
 
 ls -lah
 
-/usr/local/bin/liftOver ${human_bed} ${chain_from_human} ${species}.first.lifted.bed ${species}.first.unlifted.bed
+echo lifting ${species}
 
-/usr/local/bin/liftOver ${species}.first.lifted.bed ${chain_to_human} ${species}.check.lifted.bed ${species}.check.unlifted.bed
+/usr/local/bin/liftOver ${human_bed} \
+    *.human.chain.gz \
+    ${species}.first.lifted.bed \
+    ${species}.first.unlifted.bed
+
+/usr/local/bin/liftOver ${species}.first.lifted.bed \
+    human.*.chain.gz \
+    ${species}.check.lifted.bed \
+    ${species}.check.unlifted.bed
 
 """
 }

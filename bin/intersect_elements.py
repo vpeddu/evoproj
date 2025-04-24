@@ -21,12 +21,12 @@ def read_bed(bedpath):
         lines = [line for line in openbed]
     for element in lines: 
 
-        ename = element.split()[3]
         echr = element.split()[0]
         estart = element.split()[1]
         estop = element.split()[2]
         escore = element.split()[4]
         estrand = element.split()[5]
+        ename = element.split()[3] + '_' + echr + '_' + estart + '_' + estop + '_' + estrand
         
         try: 
             out_repeat_element.chromosome.append(echr)

@@ -24,8 +24,8 @@ if (params.help){
 
 // TODO: make modules file specific for tebag generate
 include { LiftOver } from './modules.nf'
-include { Tebag_intersect } from './modules.nf'
-include { Tebag_match} from './modules.nf'
+include { Evo_intersect } from './modules.nf'
+include { Evo_match} from './modules.nf'
 include { Upset_plot } from './modules.nf'
 include { Hal2chain_to_human } from './modules.nf'
 include { Hal2chain_from_human } from './modules.nf'
@@ -39,24 +39,26 @@ params.generate_db = false
 
             Species_name_Ch = Channel
                 .fromPath( params.NAMES_CSV )
-                .splitText()
+                .splitText().map { it.trim() }
             
             Human_bed = file(params.human_bed)
 
             Hal2chain_to_human(
                 Species_name_Ch,
-                file(params.HAL_FILE)
+                file(params.HAL_FILE),
+                params.HUMAN_NAME
             )
             Hal2chain_from_human(
                 Species_name_Ch,
-                file(params.HAL_FILE)
+                file(params.HAL_FILE),
+                params.HUMAN_NAME
             )
 
             LiftOver_hal(
                 Hal2chain_to_human.out.mix(Hal2chain_from_human.out).groupTuple(size:2),
                 Human_bed
             )
-            Tebag_intersect( 
+            Evo_intersect( 
                 LiftOver_hal.out[1].collect(),
                 Human_bed,
                 file("${baseDir}/bin/intersect_elements.py")
@@ -77,7 +79,7 @@ params.generate_db = false
                 Generate_ch,
                 Human_bed
             )
-            Tebag_intersect( 
+            Evo_intersect( 
                 LiftOver.out[1].collect(),
                 Human_bed,
                 file("${baseDir}/bin/intersect_elements.py")
@@ -85,14 +87,14 @@ params.generate_db = false
             }
         }
         else{ 
-            Tebag_match(
+            Evo_match(
             file(params.tebag_db),
             file(params.quantification_file),
             file("${baseDir}/bin/tebag_match.py")
             )
             Upset_plot(
             file("${baseDir}/bin/create_upset_plot.R"),
-            Tebag_match.out
+            Evo_match.out
             )
         }
     }
