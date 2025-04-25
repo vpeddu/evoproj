@@ -162,3 +162,63 @@ Apr-24 23:30:31.241 [Task submitter] INFO  nextflow.Session - [d9/5416e2] Submit
 Apr-24 23:31:11.643 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: Runpermutation (3); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/f2/5e51fdc16c4b6bf8836593824bb92f]
 Apr-24 23:31:11.651 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
 Apr-24 23:31:11.658 [Task submitter] INFO  nextflow.Session - [89/57ba32] Submitted process > Runpermutation (7)
+Apr-24 23:31:24.601 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: Runpermutation (11); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/d9/5416e2e4ecb67e209aefe1f7815443]
+Apr-24 23:31:24.604 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-24 23:31:24.605 [Task submitter] INFO  nextflow.Session - [22/60dd69] Submitted process > Runpermutation (13)
+Apr-24 23:31:36.994 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: Runpermutation (7); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/89/57ba327b50997803e4e50690af57a9]
+Apr-24 23:31:36.998 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-24 23:31:36.998 [Task submitter] INFO  nextflow.Session - [63/ed4774] Submitted process > Runpermutation (26)
+Apr-24 23:32:30.138 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 14; name: Runpermutation (13); status: RUNNING; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/22/60dd6958245c25841d5fcb33b3cc50]
+~> TaskHandler[id: 27; name: Runpermutation (26); status: RUNNING; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/63/ed4774bf2fe2ca034ddd26b1d1dad8]
+Apr-24 23:32:50.100 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: Runpermutation (13); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/22/60dd6958245c25841d5fcb33b3cc50]
+Apr-24 23:32:50.103 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-24 23:32:50.103 [Task submitter] INFO  nextflow.Session - [c0/cb8523] Submitted process > Runpermutation (17)
+Apr-24 23:34:38.661 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: Runpermutation (17); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/c0/cb8523710799f3386cb01d28ab15dd]
+Apr-24 23:34:38.669 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-24 23:34:38.669 [Task submitter] INFO  nextflow.Session - [a7/228481] Submitted process > Runpermutation (9)
+Apr-24 23:34:50.750 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1321 -- tasks to be submitted are shown below
+~> TaskHandler[id: 19; name: Runpermutation (18); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/2a/685dc419dc575359906ba8fec4bbaa]
+~> TaskHandler[id: 20; name: Runpermutation (19); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/f6/ca31f73abc94c6bbbeb308610c3b7b]
+~> TaskHandler[id: 7; name: Runpermutation (6); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/71/989716e6d80a3baa8acc88cc364e89]
+~> TaskHandler[id: 3; name: Runpermutation (2); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/72/73db1dfa83ee34272b23b677fa60d4]
+~> TaskHandler[id: 30; name: Runpermutation (29); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/7b/9dfbffff0befce68950c8e12129f90]
+~> TaskHandler[id: 29; name: Runpermutation (28); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/2b/f786d720cff56ebfe3130badd29075]
+~> TaskHandler[id: 22; name: Runpermutation (21); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/17/662d48e2c66e59eb093f35bd3fa9fd]
+~> TaskHandler[id: 17; name: Runpermutation (16); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/d6/b761bbad8c0a564eba2d96ef9181b1]
+~> TaskHandler[id: 34; name: Runpermutation (33); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/3e/594f2035848873a308916631a41aa5]
+~> TaskHandler[id: 23; name: Runpermutation (22); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/5f/54adff0dd391875128e681ad89151e]
+.. remaining tasks omitted.
+Apr-24 23:36:40.058 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: Runpermutation (9); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/a7/2284812a80435aff7410e7d5c31644]
+Apr-24 23:36:40.066 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-24 23:36:40.066 [Task submitter] INFO  nextflow.Session - [2a/685dc4] Submitted process > Runpermutation (18)
+Apr-24 23:37:30.213 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 27; name: Runpermutation (26); status: RUNNING; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/63/ed4774bf2fe2ca034ddd26b1d1dad8]
+~> TaskHandler[id: 19; name: Runpermutation (18); status: RUNNING; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/2a/685dc419dc575359906ba8fec4bbaa]
+Apr-24 23:37:43.602 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: Runpermutation (18); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/2a/685dc419dc575359906ba8fec4bbaa]
+Apr-24 23:37:43.605 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-24 23:37:43.605 [Task submitter] INFO  nextflow.Session - [f6/ca31f7] Submitted process > Runpermutation (19)
+Apr-24 23:39:43.623 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: Runpermutation (26); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/63/ed4774bf2fe2ca034ddd26b1d1dad8]
+Apr-24 23:39:43.627 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-24 23:39:43.628 [Task submitter] INFO  nextflow.Session - [71/989716] Submitted process > Runpermutation (6)
+Apr-24 23:39:50.751 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 2196 -- tasks to be submitted are shown below
+~> TaskHandler[id: 3; name: Runpermutation (2); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/72/73db1dfa83ee34272b23b677fa60d4]
+~> TaskHandler[id: 30; name: Runpermutation (29); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/7b/9dfbffff0befce68950c8e12129f90]
+~> TaskHandler[id: 29; name: Runpermutation (28); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/2b/f786d720cff56ebfe3130badd29075]
+~> TaskHandler[id: 22; name: Runpermutation (21); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/17/662d48e2c66e59eb093f35bd3fa9fd]
+~> TaskHandler[id: 17; name: Runpermutation (16); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/d6/b761bbad8c0a564eba2d96ef9181b1]
+~> TaskHandler[id: 34; name: Runpermutation (33); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/3e/594f2035848873a308916631a41aa5]
+~> TaskHandler[id: 23; name: Runpermutation (22); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/5f/54adff0dd391875128e681ad89151e]
+~> TaskHandler[id: 25; name: Runpermutation (24); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/89/ec41508be4e3fd25042a3e00fb1752]
+~> TaskHandler[id: 28; name: Runpermutation (27); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/c8/2f431b6f4d2f5dcd5b58acf734bb80]
+~> TaskHandler[id: 21; name: Runpermutation (20); status: NEW; exit: -; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/22/d840e4f1216f0607d678b1c1de64dc]
+.. remaining tasks omitted.
+Apr-24 23:40:28.690 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: Runpermutation (19); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/f6/ca31f73abc94c6bbbeb308610c3b7b]
+Apr-24 23:40:28.694 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-24 23:40:28.694 [Task submitter] INFO  nextflow.Session - [72/73db1d] Submitted process > Runpermutation (2)
+Apr-24 23:41:08.134 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: Runpermutation (6); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/71/989716e6d80a3baa8acc88cc364e89]
+Apr-24 23:41:08.141 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-24 23:41:08.142 [Task submitter] INFO  nextflow.Session - [7b/9dfbff] Submitted process > Runpermutation (29)
+Apr-24 23:41:32.594 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: Runpermutation (29); status: COMPLETED; exit: 0; error: -; workDir: /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/7b/9dfbffff0befce68950c8e12129f90]
+Apr-24 23:41:32.598 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-24 23:41:32.598 [Task submitter] INFO  nextflow.Session - [2b/f786d7] Submitted process > Runpermutation (28)
