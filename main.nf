@@ -113,16 +113,15 @@ params.tebag_db = ''
         age_annotated_bed = Channel
             .fromPath(params.age_annotated_bed)
         
-    Splitbed(age_annotated_bed)
+    splitbed_output = Splitbed(age_annotated_bed)
+//splitbed_output.split_bed.flatten().combine(bigbeds).view()
 
-    //combined_channel = splitbed_output.split_bed.combine(bigbeds)
 
-    Runpermutation(Splitbed.out
-    .flatten()
-    .combine(bigbeds),
-    file(params.fai)
+    Runpermutation(
+        bigbeds.combine(splitbed_output.split_bed.flatten()),
+        //splitbed_output.split_bed.flatten().combine(bigbeds),
+        file(params.fai)
     )
-
 
 
     }

@@ -192,8 +192,9 @@ input:
     file annotated_bed
 
 output: 
-    path("*.bed", emit: split_bed)
-    //path("under_threshold", emit: under_threshold)
+        path("*.bed", emit: split_bed)  // Explicitly name the output as `split_bed`
+        path("under_threshold", emit: under_threshold)
+
 shell:
 '''
     #!/bin/bash
@@ -246,12 +247,15 @@ process Runpermutation {
 publishDir "${params.OUTPUT}/permutation_testing/results/", mode: 'copy', overwrite: true
 container "vpeddu/evoproj:v1"
 beforeScript 'chmod o+rw .'
-
+errorStrategy 'ignore'
 cpus 7
 memory '16 GB'
 
-input: 
-    tuple path(annotated_bed), val(tf), path(bigbeds)
+input:
+    //tuple path(annotated_bed), val(groupKey), path(bigbed_files)  // Corrected input declaration
+    //tuple path(annotated_bed), val(tf), path(bigbeds)
+    tuple val(tf), path(bigbeds), path(annotated_bed)
+
     file fai
 
 output:
