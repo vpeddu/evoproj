@@ -5,3 +5,9 @@ local_data/
 *.pkl
 work/
 .nextflow.log.*
+test_output/*
+*.Rhistory
+*.Rproj
+*.nextflow.cache/*
+real_output/*
+.nextflow/history

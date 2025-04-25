@@ -30,8 +30,12 @@ include { Upset_plot } from './modules.nf'
 include { Hal2chain_to_human } from './modules.nf'
 include { Hal2chain_from_human } from './modules.nf'
 include { LiftOver_hal } from './modules.nf'
+include {Splitbed} from './modules.nf'
+include {Runpermutation} from './modules.nf'
 
 params.generate_db = false
+params.CHAINS = false
+params.tebag_db = ''
 
     workflow{
         if ( params.generate_db ){
@@ -86,7 +90,7 @@ params.generate_db = false
             )
             }
         }
-        else{ 
+        else if (params.CHAINS) { 
             Evo_match(
             file(params.tebag_db),
             file(params.quantification_file),
@@ -97,4 +101,29 @@ params.generate_db = false
             Evo_match.out
             )
         }
+    if ( params.permutation_test ) { 
+        bigbeds = Channel
+        .fromPath('s3://human-pangenomics/T2T/CHM13/assemblies/annotation/regulation/ENCODE/macs2_peak/*.bb')
+            .map { filePath -> 
+                def fileName = filePath.name
+                def groupKey = fileName.split('\\.')[2] // Extract the value before .bb
+                [groupKey, filePath]
+            }.groupTuple()
+
+        age_annotated_bed = Channel
+            .fromPath(params.age_annotated_bed)
+        
+    Splitbed(age_annotated_bed)
+
+    //combined_channel = splitbed_output.split_bed.combine(bigbeds)
+
+    Runpermutation(Splitbed.out
+    .flatten()
+    .combine(bigbeds),
+    file(params.fai)
+    )
+
+
+
     }
+}
