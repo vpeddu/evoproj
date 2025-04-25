@@ -10,4 +10,4 @@ test_output/*
 *.Rproj
 *.nextflow.cache/*
 real_output/*
-.nextflow/history
+.nextflow*
