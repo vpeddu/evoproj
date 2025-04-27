@@ -11,3 +11,4 @@ test_output/*
 *.nextflow.cache/*
 real_output/*
 .nextflow*
+bigbeds/
