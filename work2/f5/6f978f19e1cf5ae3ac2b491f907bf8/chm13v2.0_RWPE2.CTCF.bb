@@ -1,0 +1,1 @@
+/media/vikas/fast/data/TEBAG/publication/scripts/evoproj/bigbeds/chm13v2.0_RWPE2.CTCF.bb

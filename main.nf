@@ -103,14 +103,16 @@ params.tebag_db = ''
         }
     if ( params.permutation_test ) { 
         bigbeds = Channel
-        .fromPath('s3://human-pangenomics/T2T/CHM13/assemblies/annotation/regulation/ENCODE/macs2_peak/*.bb')
+        //.fromPath('s3://human-pangenomics/T2T/CHM13/assemblies/annotation/regulation/ENCODE/macs2_peak/*.bb')
+        .fromPath("${params.bigbed_files}/*.bb")
+            //.filter { filePath -> filePath.name.endsWith('.bb') }
             .map { filePath -> 
                 def fileName = filePath.name
                 def groupKey = fileName.split('\\.')[2] // Extract the value before .bb
                 [groupKey, filePath]
             }.groupTuple()
-
-        age_annotated_bed = Channel
+    
+            age_annotated_bed = Channel
             .fromPath(params.age_annotated_bed)
         
     splitbed_output = Splitbed(age_annotated_bed)

@@ -1,0 +1,32 @@
+total 52K
+drwxrwxrwx 2 1000 1000 4.0K Apr 27 03:28 .
+drwxrwxr-x 3 1000 1000 4.0K Apr 27 03:28 ..
+-rw-rw-r-- 1 1000 1000    0 Apr 27 03:28 .command.begin
+-rw-rw-r-- 1 1000 1000    0 Apr 27 03:28 .command.err
+-rw-rw-r-- 1 1000 1000    0 Apr 27 03:28 .command.log
+-rw-rw-r-- 1 1000 1000    0 Apr 27 03:28 .command.out
+-rw-rw-r-- 1 1000 1000 4.8K Apr 27 03:28 .command.run
+-rw-rw-r-- 1 1000 1000  360 Apr 27 03:28 .command.sh
+lrwxrwxrwx 1 1000 1000  113 Apr 27 03:28 LTR78B_human.bed -> /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work2/5b/b241485088ff3c3f1ca562750e34a6/LTR78B_human.bed
+lrwxrwxrwx 1 1000 1000   83 Apr 27 03:28 chm13v2.0.fa.fai -> /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/work/test/chm13v2.0.fa.fai
+lrwxrwxrwx 1 1000 1000   90 Apr 27 03:28 chm13v2.0_BE2C.H3K9me3.bb -> /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/bigbeds/chm13v2.0_BE2C.H3K9me3.bb
+lrwxrwxrwx 1 1000 1000   92 Apr 27 03:28 chm13v2.0_Caco-2.H3K9me3.bb -> /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/bigbeds/chm13v2.0_Caco-2.H3K9me3.bb
+lrwxrwxrwx 1 1000 1000   91 Apr 27 03:28 chm13v2.0_HAP-1.H3K9me3.bb -> /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/bigbeds/chm13v2.0_HAP-1.H3K9me3.bb
+lrwxrwxrwx 1 1000 1000   90 Apr 27 03:28 chm13v2.0_MG63.H3K9me3.bb -> /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/bigbeds/chm13v2.0_MG63.H3K9me3.bb
+lrwxrwxrwx 1 1000 1000   93 Apr 27 03:28 chm13v2.0_SJCRH30.H3K9me3.bb -> /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/bigbeds/chm13v2.0_SJCRH30.H3K9me3.bb
+lrwxrwxrwx 1 1000 1000   91 Apr 27 03:28 chm13v2.0_SJSA1.H3K9me3.bb -> /media/vikas/fast/data/TEBAG/publication/scripts/evoproj/bigbeds/chm13v2.0_SJSA1.H3K9me3.bb
+Starting permutation test with 10000 permutations
+Species: LTR78B, Repeat: human
+Found 6 bigBed files to process
+Merging BED files...
+Reading genome index file...
+Reading BED file: LTR78B_human.bed
+Processed 50 lines from BED file
+Reading BED file: merged_SetB.bed
+Processed 257078 lines from BED file
+Sorting and merging intervals...
+Sorting and merging intervals...
+Computing observed overlap...
+Observed overlap: 1239 bases
+Starting permutation testing with 10000 permutations...
+Using 16 parallel processes
